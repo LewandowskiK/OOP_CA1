@@ -30,7 +30,8 @@ public class TestAlbum {
 
         album.playTrack(Integer.parseInt(JOptionPane.showInputDialog("Which track number would you like to play?")));
 
-        album.shuffle();
+        if(JOptionPane.showConfirmDialog(null,"Do you wish to shuffle the playlist?")==0)
+            album.shuffle();
 
         System.exit(0);
     }
